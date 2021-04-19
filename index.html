@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Firebase Realtime Database - Client Side For Restaurant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <form>
+        <label for="Name">Name</label><br>
+        <input type="text" name="Name" id="Name"><br>
+        <label for="Address">Address</label><br>
+        <input type="text" name="Address" id="Address"><br>
+        <label for="Landmark">Landmark</label><br>
+        <input type="text" name="Landmark" id="Landmark"><br>  
+        <label for="Pincode">Pincode</label><br>
+        <input type="number" name="Pincode" id="Pincode"><br>
+        <label for="PhoneNo">PhoneNo</label><br>
+        <input type="number" name="PhoneNo" id="PhoneNo"><br>
+        <button id="addBtn" class="btn waves-effect waves-light">Place Order</button>
+        
+    </form>
+  </main>
+
+  <!--Firebase Configuration Files....Change this with your own Restaurant Project Initialisation-->
+ 
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+
+  <!--Extra Added Code to load the database SDK-->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+
+   
+  <script>
+ 
+     var firebaseConfig = {
+      apiKey: "AIzaSyAAdXkfkTtv-L0CQ_runjAZzxAKWD0t14Y",
+      authDomain: "restaurant-minorproject.firebaseapp.com",
+      databaseURL: "https://restaurant-minorproject-default-rtdb.firebaseio.com",
+      projectId: "restaurant-minorproject",
+      storageBucket: "restaurant-minorproject.appspot.com",
+      messagingSenderId: "589970951019",
+      appId: "1:589970951019:web:4dcc1af6ab55d478881a2e"
+     };
+
+    firebase.initializeApp(firebaseConfig);
+
+  </script>
+
+
+
+
+
+<!--Separate from Firebase, Client Side Code is loaded over here-->
+
+<script src="./app.js"></script>
+
+</body>
+</html>
